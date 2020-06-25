@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
-  "homepage": "https://dcdeiv.github.io/me",
   "scripts": {
     "commit": "git-cz",
     "start": "craco start",

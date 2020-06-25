@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Layout } from "src/Components";
 
 // Routes
@@ -9,7 +9,7 @@ import { Formazione } from "./Formazione";
 
 export default function App(props) {
   return (
-    <BrowserRouter basename="/me">
+    <Router>
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -17,6 +17,6 @@ export default function App(props) {
           <Route path="*" component={NotFound} />
         </Switch>
       </Layout>
-    </BrowserRouter>
+    </Router>
   );
 }
