@@ -1,0 +1,1 @@
+export { Formazione } from "./Formazione";
