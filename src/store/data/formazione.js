@@ -6,7 +6,7 @@ export const formazione = [
     qualificationType: "Diploma di Scuola Superiore",
     qualification: "Perito aziendale e corrispondente in lingue estere",
     started: 2005,
-    finished: null,
+    finished: 2011,
     grade: 70,
     maxGrade: 100,
     description:
