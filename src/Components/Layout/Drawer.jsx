@@ -13,6 +13,7 @@ import { AvatarMe, AdapterLink } from "src/Components";
 // Icons
 import HomeIcon from "@material-ui/icons/Home";
 import SchoolIcon from "@material-ui/icons/School";
+import ReceiptIcon from "@material-ui/icons/Receipt";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -62,6 +63,13 @@ export function AppDrawer(props) {
               <SchoolIcon />
             </ListItemIcon>
             <ListItemText primary="Formazione" />
+          </ListItemLink>
+
+          <ListItemLink to="/certificati">
+            <ListItemIcon>
+              <ReceiptIcon />
+            </ListItemIcon>
+            <ListItemText primary="Certificati" />
           </ListItemLink>
         </List>
       </div>

@@ -6,6 +6,7 @@ import { Layout } from "src/Components";
 import { Home } from "./Home";
 import { NotFound } from "./NotFound";
 import { Formazione } from "./Formazione";
+import { Certificati } from "./Certificati";
 
 export default function App(props) {
   return (
@@ -14,6 +15,7 @@ export default function App(props) {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/formazione" component={Formazione} />
+          <Route path="/certificati" component={Certificati} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Layout>
