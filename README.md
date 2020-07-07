@@ -4,4 +4,4 @@ Personal CV/résumé, portfolio
 
 ---
 
-Visit by clicking [here](https://dcdeiv.github.io/)
+Visit by clicking [here](https://ctrlmaniac.github.io/)
