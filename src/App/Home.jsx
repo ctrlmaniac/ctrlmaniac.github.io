@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { AvatarMe, SocialBox, AppHeader } from "src/Components";
 
 // Widgets
-import { Formazione, Certificati } from "src/Widgets";
+import { Formazione, Certificati, Esperienze } from "src/Widgets";
 
 const useStyles = makeStyles((theme) => ({
   headerBox: {
@@ -20,7 +20,9 @@ const useStyles = makeStyles((theme) => ({
 
 export function Home(props) {
   const classes = useStyles();
-  let { me, formazione, certificati } = useSelector((state) => state);
+  let { me, formazione, certificati, esperienze } = useSelector(
+    (state) => state
+  );
 
   return (
     <React.Fragment>
@@ -37,6 +39,10 @@ export function Home(props) {
 
       <Box mt={4}>
         <Container maxWidth="md">
+          <Box mb={4}>
+            <Esperienze lista={esperienze} />
+          </Box>
+
           <Box mb={4}>
             <Formazione lista={formazione} />
           </Box>
