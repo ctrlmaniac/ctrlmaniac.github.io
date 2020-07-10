@@ -5,7 +5,6 @@ import {
   CardHeader,
   CardContent,
   Typography,
-  Grid,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import LocationCityIcon from "@material-ui/icons/LocationCity";
@@ -16,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     padding: 0,
-    paddingBottom: 8,
   },
   icon: {
     flex: "0 0 auto",
@@ -27,6 +25,17 @@ const useStyles = makeStyles((theme) => ({
   },
   offset: {
     marginLeft: 40,
+  },
+  card: {
+    paddingBottom: 16,
+  },
+  cardContent: {
+    paddingTop: 8,
+    paddingBottom: 0,
+    "&:last-child": {
+      paddingTop: 8,
+      paddingBottom: 0,
+    },
   },
 }));
 
@@ -42,9 +51,11 @@ const Content = ({ icon, children, ...rest }) => {
 };
 
 export function Card({ dettagli: d, ...rest }) {
+  const classes = useStyles();
+
   return (
     <Box {...rest}>
-      <MaterialCard>
+      <MaterialCard className={classes.card}>
         <CardHeader
           title={d.qualification}
           subheader={d.business}
@@ -56,43 +67,28 @@ export function Card({ dettagli: d, ...rest }) {
           style={{ paddingBottom: 0 }}
         />
 
-        <CardContent style={{ paddingBottom: "16px !important" }}>
-          <Grid
-            container
-            direction="row"
-            justify="space-between"
-            alignItems="center"
-          >
-            <Grid item xs={12}>
-              <Content icon={<LocationCityIcon />}>
-                <Typography>{d.location}</Typography>
-              </Content>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Content icon={<AccessTimeIcon />}>
-                <Typography>
-                  {d.started} {String.fromCharCode(8594)}{" "}
-                  {d.finished ? d.finished : "ad oggi"}
-                </Typography>
-              </Content>
-            </Grid>
-          </Grid>
-
-          {d.description && (
-            <React.Fragment>
-              <Typography>
-                <b>Descrizione:</b>
-              </Typography>
-              <Typography
-                gutterBottom
-                variant="body2"
-                style={{ whiteSpace: "pre-line" }}
-              >
-                {d.description}
-              </Typography>
-            </React.Fragment>
-          )}
+        <CardContent className={classes.cardContent}>
+          <Content icon={<LocationCityIcon />}>
+            <Typography>{d.location}</Typography>
+          </Content>
+          <Content icon={<AccessTimeIcon />}>
+            <Typography>
+              {d.started} {String.fromCharCode(8594)}{" "}
+              {d.finished ? d.finished : "ad oggi"}
+            </Typography>
+          </Content>
         </CardContent>
+
+        {d.description && (
+          <CardContent className={classes.cardContent}>
+            <Typography>
+              <b>Descrizione:</b>
+            </Typography>
+            <Typography variant="body2" style={{ whiteSpace: "pre-line" }}>
+              {d.description}
+            </Typography>
+          </CardContent>
+        )}
       </MaterialCard>
     </Box>
   );

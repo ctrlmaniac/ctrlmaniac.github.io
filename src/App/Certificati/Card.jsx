@@ -75,7 +75,7 @@ export function Card({ dettagli: d, ...rest }) {
           <CardActions className={classes.actions}>
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               size="small"
               onClick={() => window.open(d.certUrl, "_blank")}
             >
