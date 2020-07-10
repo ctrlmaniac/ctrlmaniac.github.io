@@ -7,6 +7,7 @@ import { Home } from "./Home";
 import { NotFound } from "./NotFound";
 import { Formazione } from "./Formazione";
 import { Certificati } from "./Certificati";
+import { Esperienze } from "./Esperienze";
 
 export default function App(props) {
   return (
@@ -16,6 +17,7 @@ export default function App(props) {
           <Route exact path="/" component={Home} />
           <Route path="/formazione" component={Formazione} />
           <Route path="/certificati" component={Certificati} />
+          <Route path="/esperienze" component={Esperienze} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Layout>
