@@ -33,22 +33,17 @@ export function Certificati({ lista, ...rest }) {
             <React.Fragment key={i}>
               <Divider />
               <ListItem>
-                <ListItemText>
-                  <Typography>
-                    <b>{c.name}</b>
-                  </Typography>
-                  <Typography variant="body2">{c.provider}</Typography>
-                  {c.certUrl && (
-                    <ListItemSecondaryAction>
-                      <IconButton
-                        edge="end"
-                        onClick={() => window.open(c.certUrl, "_blank")}
-                      >
-                        <DescriptionIcon />
-                      </IconButton>
-                    </ListItemSecondaryAction>
-                  )}
-                </ListItemText>
+                <ListItemText primary={c.name} secondary={c.provider} />
+                {c.certUrl && (
+                  <ListItemSecondaryAction>
+                    <IconButton
+                      edge="end"
+                      onClick={() => window.open(c.certUrl, "_blank")}
+                    >
+                      <DescriptionIcon />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+                )}
               </ListItem>
               <Divider />
             </React.Fragment>

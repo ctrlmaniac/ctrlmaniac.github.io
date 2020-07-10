@@ -32,12 +32,10 @@ export function Formazione({ lista, ...rest }) {
             <React.Fragment key={i}>
               <Divider />
               <ListItem>
-                <ListItemText>
-                  <Typography>
-                    <b>{f.qualification}</b>
-                  </Typography>
-                  <Typography variant="body2">{f.qualificationType}</Typography>
-                </ListItemText>
+                <ListItemText
+                  primary={f.qualification}
+                  secondary={f.qualificationType}
+                />
               </ListItem>
               <Divider />
             </React.Fragment>
