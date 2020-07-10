@@ -5,7 +5,7 @@ export const me = {
   socials: {
     linkedin: "https://www.linkedin.com/in/dcdavide/",
     facebook: "https://www.facebook.com/deivdeivdeiv/",
-    github: "https://github.com/dcdeiv/",
+    github: "https://github.com/ctrlmaniac/",
     instagram: "https://www.instagram.com/meldinco/",
     pinterest: "https://pinterest.com/meldinco/",
   },
