@@ -45,20 +45,19 @@
   },
   "dependencies": {
     "@craco/craco": "^5.6.4",
-    "@date-io/moment": "^2.6.0",
-    "@material-ui/core": "^4.10.2",
+    "@date-io/moment": "^2.7.0",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@material-ui/styles": "^4.10.0",
     "axios": "^0.19.2",
     "history": "^5.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.27.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-intl": "^4.6.10",
+    "react-intl": "^4.7.6",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
@@ -67,13 +66,16 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "3.2.0",
     "gh-pages": "^3.1.0",
     "husky": "^4.2.5",
+    "import": "^0.0.6",
+    "plugin": "^0.3.3",
     "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "yarn": "^1.22.4"
   }
 }
